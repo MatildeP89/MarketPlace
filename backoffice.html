@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Back office</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="BOstyle.css">
+
+
+</head>
+<body>
+    
+<h1 class="text-center">Admin page</h1>
+
+<div class="d-flex justify-content-center"> 
+
+    <div id="spinner"> </div>
+</div>
+
+<main> 
+<div class="container mt-3">
+
+    <div class="row g-4">   
+
+         <div class="col-sm-12 col-md-4 col-lg-4 mt-3 d-flex flex-column border border-primary p-2">
+        <h3 class="text-center text-success">Add a new product</h3>
+        <label>Insert product name</label>
+         <input type="text" placeholder="Type the name..." id="nameF" required>
+        <label>Insert product description</label>
+         <input type="text" placeholder="Type description..." id="descF" required>
+        <label>Insert product brand</label>
+         <input type="text" placeholder="Type the brand..." id="brandF">
+        <label>Insert imageUrl</label>
+         <input type="text" placeholder="Insert image url..." id="imageF" required>
+        <label>Insert product price without the currency</label> 
+        <input type="text" placeholder="What's the price?" id="priceF" required>
+        <button class="btn btn-success m-1" onclick="addproductValues()">Add product</button>
+    </div>
+
+
+
+    <div class="col-sm-12 col-md-4 col-lg-4 mt-3 d-flex flex-column border border-primary p-2">
+        <h3 class="text-center text-primary">Modify a product</h3>
+        <label>Insert ID product</label>
+        <input type="text" placeholder="Type the ID..." id="idF">
+        <label>Insert product name</label> 
+        <input type="text" placeholder="Type the name..." id="nameF2">
+        <label>Insert product description</label>
+         <input type="text" placeholder="Type description..." id="descF2">
+        <label>Insert product brand</label> 
+        <input type="text" placeholder="Type the brand..." id="brandF2">
+        <label>Insert imageUrl</label> 
+        <input type="text" placeholder="Insert image url..." id="imageF2">
+        <label>Insert product price without the currency</label> 
+        <input type="text" placeholder="What's the price?" id="priceF2">
+        <button class="btn btn-primary m-1" onclick="modifyproductValues()">Modify</button>
+    </div>
+
+
+    <div class="col-sm-12 col-md-4 col-lg-4 mt-3 d-flex flex-column border border-primary p-2">
+        <h3 class="text-center text-danger">Delete a product</h3>
+        <label>Insert ID product</label> <input type="text" placeholder="Type the ID..." id="idF2">
+      
+        <button class="btn btn-danger m-1" onclick="deleteproductValues()">Delete</button>
+    </div>
+
+    
+</div>
+</div>
+
+<div class="container mt-3">
+    <div class="d-flex flex-column gap-2"> 
+    <button class="btn btn-secondary w-25" onclick="fetchData()">Get data</button>
+<a href="marketplace.html" class="btn btn-dark w-25"> Go to my marketplace</a>
+    <div class="border border-secondary p-2 mt-3" id="datadiv">   </div>
+</div>
+</div>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js
+"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+
+<script src="BOscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+#datadiv{display: none;}
+h1{color: fuchsia; background-image: linear-gradient(black, rgb(230, 182, 236)); padding: 10px;}
+body{background-color: rgb(230, 182, 236);
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;}
+
+#spinner{width:50px; height:50px; border: 5px solid rgb(238, 238, 238); border-top: 5px solid fuchsia; border-radius:50%; animation: spin 0.8s linear infinite; display: none;}
+
+@keyframes spin {
+    from {transform:rotate(0deg);}
+    to{transform:rotate(360deg);}
+}
